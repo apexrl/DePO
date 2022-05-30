@@ -1,0 +1,23 @@
+basic:
+  exp_name: bco
+  model_save_dir: ../../gail_torch/assets/learned_models
+  expert_path: ../../gail_torch/assets/expert_traj/expert.pkl
+  tb_log_dir: ../../gail_torch/assets/tblogs
+
+env_specs:
+  env_name: GridWorld-v0
+  repeat_ratio: 1
+
+exp_params:
+  seed: 0
+  memory_size: 10000
+  update_timestep: 128
+  num_updates: 100
+  num_pretrain: 0
+  num_threads: 1
+  policy_params:
+    actor_lr: 0.003
+    id_lr: 0.003
+
+others:
+  model_save_freq: 0

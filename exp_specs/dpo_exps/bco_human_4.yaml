@@ -1,0 +1,60 @@
+meta_data:
+  script_path: run_scripts/bco_exp_script.py
+  exp_name: bco_humanoid_STANDARD_EXP
+  description: Train a bco model
+  num_workers: 5 # 64
+  num_gpu_per_worker: 1 # 0
+# -----------------------------------------------------------------------------
+variables:
+  seed: [0,1,2,3,4]
+
+# -----------------------------------------------------------------------------
+constants:
+  expert_name: 'humanoid_sac'
+  expert_idx: 0
+  scale_env_with_demo_stats: false
+  traj_num: 4
+
+  policy_net_size: 256
+  policy_num_hidden_layers: 2
+
+  bco_params:
+    mode: 'MSE'
+    inverse_mode: 'MSE'
+    state_only: true
+
+    num_epochs: 302
+    num_steps_per_epoch: 10000
+    num_steps_between_train_calls: 1000
+    max_path_length: 1000
+    min_steps_before_training: 5000
+
+    eval_deterministic: true
+    num_steps_per_eval: 20000
+    
+    replay_buffer_size: 1000000
+    no_terminal: true
+    eval_no_terminal: false
+    wrap_absorbing: false
+
+    num_update_loops_per_train_call: 1000
+    num_policy_updates_per_loop_iter: 1
+    num_inverse_dynamic_updates_per_loop_iter: 1
+    num_pretrain_updates: 10
+
+    policy_optim_batch_size: 256
+
+    inverse_dynamic_lr: 0.0001
+    inverse_dynamic_momentum: 0.9
+
+    save_best: true
+    freq_saving: 20
+    save_replay_buffer: false
+    save_environment: false
+    save_algorithm: false
+
+  env_specs:
+    env_name: 'humanoid'
+    env_kwargs: {}
+    eval_env_seed: 78236
+    training_env_seed: 24495

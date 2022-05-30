@@ -1,0 +1,23 @@
+basic:
+  exp_name: gaifo
+  model_save_dir: ../../gail_torch/assets/learned_models
+  expert_path: ../../gail_torch/assets/expert_traj/expert.pkl
+  tb_log_dir: ../../gail_torch/assets/tblogs
+
+env_specs:
+  env_name: GridWorld-v0
+  repeat_ratio: 1
+
+exp_params:
+  state_only: True
+  seed: 2
+  memory_size: 20000
+  update_timestep: 64
+  num_updates: 100
+  num_threads: 1
+  actor_lr: 0.0003
+  critic_lr: 0.0003
+  disc_lr: 0.0003
+
+others:
+  model_save_freq: 0
