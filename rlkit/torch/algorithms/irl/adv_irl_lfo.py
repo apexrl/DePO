@@ -21,26 +21,12 @@ from tqdm import tqdm
 
 class AdvIRL_LfO(TorchBaseAlgorithm):
     """
-    Depending on choice of reward function and size of replay
-    buffer this will be:
-        - AIRL
-        - GAIL (without extra entropy term)
-        - FAIRL
-        - Discriminator Actor Critic
-
-    I did not implement the reward-wrapping mentioned in
-    https://arxiv.org/pdf/1809.02925.pdf though
-
-    Features removed from v1.0:
-        - gradient clipping
-        - target disc (exponential moving average disc)
-        - target policy (exponential moving average policy)
-        - disc input noise
+    Main implementation of DePO (CDePG).
     """
 
     def __init__(
         self,
-        mode,  # airl, gail, fairl, or sl
+        mode,  # reward / train mode, see below
         inverse_mode,  # MLE or MSE
         state_predictor_mode,  # MLE or MSE
         discriminator,
