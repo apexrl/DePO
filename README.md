@@ -4,7 +4,7 @@ Official Pytorch implemetation of ICML2022 paper [Depo (Plan Your Target and Lea
 
 **Important Notes**
 
-This repository is based on [ILSwiss](https://github.com/Ericonaldo/ILSwiss).
+This repository is based on [ILSwiss](https://github.com/Ericonaldo/ILSwiss). The code is for Mujoco experiments, if you are looking for NGSIM experiments, check [here](https://github.com/apexrl/DePO_NGSIM).
 
 # Algorithms Contained
 
