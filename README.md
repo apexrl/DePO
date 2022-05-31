@@ -41,7 +41,7 @@ NOTE: all experiments, including the evaluation tasks (see `\run_scripts\evaluat
 
 ### Training Expert Policies
 
-Train an SAC agent and collect expert demos, or use the demo [here](https://github.com/apexrl/Baseline_Pool/tree/master/imitation_learning/sac/expert_trajs_50). Then write the demon path in `\demos_listing.yaml`.
+Train an SAC agent and collect expert demos, or use the demo [here](https://github.com/apexrl/Baseline_Pool/tree/master/imitation_learning/sac/expert_trajs_50). Then write the demo path in `\demos_listing.yaml`.
 
 ### Example scripts
 
@@ -49,6 +49,7 @@ Train an SAC agent and collect expert demos, or use the demo [here](https://gith
 
 #### Training LfO Agents
 
+Baseline results are available in [here](https://github.com/apexrl/DePO/tree/main/baselines).
 **Config files are in `exp_specs/dpo_exps`. Example commands**:
 
 BCO
