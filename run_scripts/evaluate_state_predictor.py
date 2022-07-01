@@ -310,11 +310,11 @@ if __name__ == "__main__":
             exp_specs["scale_env_with_demo_stats"] = False
             exp_specs["plan_step"] = 1000
 
-        exp_specs["policy_checkpoint"] = "./logs/" + train_file + _file + pkl_name
-        flag = False
-        if "dpo" in train_file:
-            flag = True
+    exp_specs["policy_checkpoint"] = "./logs/" + train_file + _file + pkl_name
+    flag = False
+    if "dpo" in train_file:
+        flag = True
 
-        seed = exp_specs["seed"]
-        set_seed(seed)
-        experiment(exp_specs, flag)
+    seed = exp_specs["seed"]
+    set_seed(seed)
+    experiment(exp_specs, flag)
