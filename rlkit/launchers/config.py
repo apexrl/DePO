@@ -1,3 +1,5 @@
-LOCAL_LOG_DIR = "/NAS2020/Workspaces/DRLGroup/mhliu/illib/DPO/logs/"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-OUTPUT_DIR_FOR_DOODAD_TARGET = "/NAS2020/Workspaces/DRLGroup/mhliu/illib/DPO/output/"
+LOCAL_LOG_DIR = os.path.join(BASE_DIR, "logs")
+
+OUTPUT_DIR_FOR_DOODAD_TARGET = os.path.join(BASE_DIR, "output")
