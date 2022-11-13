@@ -55,31 +55,31 @@ Baseline results are available in [here](https://github.com/apexrl/DePO/tree/mai
 BCO
 
 ```bash
-python run_experiment.py --nosrun -e exp_specs/dpo_exps/bco_hopper_4.yaml
+python run_experiment.py -e exp_specs/dpo_exps/bco_hopper_4.yaml
 ```
 
 GAIfO
 
 ```bash
-python run_experiment.py --nosrun -e exp_specs/dpo_exps/gailfo_hopper_4.yaml
+python run_experiment.py -e exp_specs/dpo_exps/gailfo_hopper_4.yaml
 ```
 
 GAIfO-DP
 
 ```bash
-python run_experiment.py --nosrun -e exp_specs/dpo_exps/gailfo_dp_hopper_4.yaml
+python run_experiment.py -e exp_specs/dpo_exps/gailfo_dp_hopper_4.yaml
 ```
 
 DPO (Supervised)
 
 ```bash
-python run_experiment.py --nosrun -e exp_specs/dpo_exps/sl_lfo_hopper_4.yaml
+python run_experiment.py -e exp_specs/dpo_exps/sl_lfo_hopper_4.yaml
 ```
 
 DPO
 
 ```bash
-python run_experiment.py --nosrun -e exp_specs/dpo_exps/dpo_hopper_4_weightedmle_qsa_weight.yaml
+python run_experiment.py -e exp_specs/dpo_exps/dpo_hopper_4_weightedmle_qsa_weight.yaml
 ```
 
 #### Abaltion Study
@@ -87,7 +87,7 @@ python run_experiment.py --nosrun -e exp_specs/dpo_exps/dpo_hopper_4_weightedmle
 **Config files are in `exp_specs/ablation`. Example commands**:
 
 ```bash
-python run_experiment.py --nosrun -e exp_specs/ablation/dpo_hopper_4_weightedmle_qsa_static_lambdah.yaml
+python run_experiment.py -e exp_specs/ablation/dpo_hopper_4_weightedmle_qsa_static_lambdah.yaml
 ```
 
 #### Transfer Experiments
@@ -95,7 +95,7 @@ python run_experiment.py --nosrun -e exp_specs/ablation/dpo_hopper_4_weightedmle
 **Config files are in `exp_specs/transfer_exps` and `exp_specs/complex_transfer`. Example commands** (remember to change the loaded policy ckpt path in the yaml file):
 
 ```bash
-python run_experiment.py --nosrun -e exp_specs/transfer_exps/dpo_hopper_4_weightedmle_qsa_weight.yaml
+python run_experiment.py -e exp_specs/transfer_exps/dpo_hopper_4_weightedmle_qsa_weight.yaml
 ```
 
 #### RL Experiments
@@ -103,7 +103,7 @@ python run_experiment.py --nosrun -e exp_specs/transfer_exps/dpo_hopper_4_weight
 **Config files are in `exp_specs/rl`. Example commands**:
 
 ```bash
-python run_experiment.py --nosrun -e exp_specs/rl/dpo_hopper.yaml
+python run_experiment.py -e exp_specs/rl/dpo_hopper.yaml
 ```
 
 #### RL transfer Experiments
@@ -111,7 +111,7 @@ python run_experiment.py --nosrun -e exp_specs/rl/dpo_hopper.yaml
 **Config files are in `exp_specs/rl_transfer`. Example commands** (remember to change the loaded policy ckpt path in the yaml file):
 
 ```bash
-python run_experiment.py --nosrun -e exp_specs/rl_transfer/dpo_hopper.yaml
+python run_experiment.py -e exp_specs/rl_transfer/dpo_hopper.yaml
 ```
 
 ### Evaluate state planner
@@ -119,5 +119,5 @@ python run_experiment.py --nosrun -e exp_specs/rl_transfer/dpo_hopper.yaml
 **Config files are in `exp_specs/evaluation`. Example commands**  (remember to change the loaded policy ckpt in `evaluate_state_predictor.py`):
 
 ```bash
-python run_experiment.py --nosrun -e exp_specs/evaluation/eval_sp.yaml
+python run_experiment.py -e exp_specs/evaluation/eval_sp.yaml
 ```
